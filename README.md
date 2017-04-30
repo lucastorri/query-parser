@@ -4,5 +4,5 @@
 ## Generate Grammar Code
 
 ```bash
-antlr4 -Dlanguage=JavaScript -o lib Query.g4
+antlr4 -Dlanguage=JavaScript -o lib antlr4/Query.g4
 ```
