@@ -16,10 +16,13 @@
   },
   "scripts": {
     "lint": "xo",
+    "format": "xo --fix",
     "test": "xo && nyc ava --verbose"
   },
   "xo": {
-    "ignores": ["lib/antlr4"]
+    "ignores": [
+      "lib/antlr4/**"
+    ]
   },
   "author": "",
   "license": "ISC"
