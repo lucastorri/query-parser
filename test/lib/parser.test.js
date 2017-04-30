@@ -1,5 +1,5 @@
 import {test} from 'ava';
-import {parse} from '../../lib/parser';
+import {parse, ParserError} from '../../lib/parser';
 
 test('parses empty strings', t => {
 	t.deepEqual(parse(''), []);
@@ -37,5 +37,5 @@ test('parses multiple combinations', t => {
 });
 
 test('fails on invalid inputs', t => {
-	t.throws(() => parse('unmatched quote "'));
+	t.throws(() => parse('unmatched quote "'), ParserError);
 });
