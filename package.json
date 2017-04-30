@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "antlr4": "^4.7.0"
+    "antlr4": "^4.7.0",
+    "chalk": "^1.1.3",
+    "cli": "^1.0.1",
+    "cli-table2": "^0.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "nyc": "^10.3.0",
+    "xo": "^0.18.1"
+  },
   "scripts": {
-    "test": "nyc ava --verbose"
+    "lint": "xo",
+    "test": "xo && nyc ava --verbose"
+  },
+  "xo": {
+    "ignores": ["lib/antlr4"]
   },
   "author": "",
   "license": "ISC"
